@@ -1,0 +1,84 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Jan 09, 2025 at 02:28 PM
+-- Server version: 8.0.30
+-- PHP Version: 8.2.24
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `suroboyotrip`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `destinasi`
+--
+
+CREATE TABLE `destinasi` (
+  `id` int NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `deskripsi` text NOT NULL,
+  `gambar` varchar(255) NOT NULL,
+  `rating` decimal(2,1) NOT NULL,
+  `maps_link` text NOT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `destinasi`
+--
+
+INSERT INTO `destinasi` (`id`, `nama`, `deskripsi`, `gambar`, `rating`, `maps_link`, `created_at`, `updated_at`) VALUES
+(1, 'Kenjeran Park', 'Kenjeran Park menyuguhkan daya tarik wisata pesisir pantai di utara Kota Surabaya. Keindahan pesona pantai dengan pemandangan berlatar belakang Jembatan Suramadu bisa anda nikmati dari tempat ini. Biasanya masyarakat berkunjung kesini waktu senja untuk menikmati sunsetnya pesisir pantai kenjeran yang sangat memanjakan mata. Beragam fasilitas seperti playground, gazebo, anjungan, stan – stan souvenir produk UMKM, dan foodcourt yang menawarkan berbagai pilihan kuliner khas pesisir wajib dicoba saat anda berwisata di Kenjeran Park ini.', 'assets/images/kenpark.webp', 4.2, 'https://www.google.com/maps/place/Taman+Hiburan+Pantai+Kenjeran', '2024-12-29 15:51:04', '2024-12-29 15:51:04'),
+(2, 'Museum Sepuluh Nopember', 'Monumen Tugu Pahlawan dibangun untuk mengenang sejarah perjuangan Pahlawan Kemerdekaan Bangsa Indonesia dalam peristiwa pertempuran 10 Nopember 1945 di Surabaya. Bangunan monumen dibangun dengan bentuk menyerupai \"paku terbalik\" setinggi 45-yard atau 40,50 meter. Untuk melengkapi monumen, dibangunlah fasilitas sejarah yaitu Museum 10 Nopember yang di dalamnya terdapat ratusan koleksi seperti koleksi foto, senjata rampasan dan artefak peninggalan pertempuran di Surabaya dan fasilitas pendukung lain yaitu diorama elekronik dan diorama statis.', 'assets/images/museum sepuluh nopember.jpg', 4.7, 'https://maps.app.goo.gl/kVgJk9daTXYmMfEv6', '2024-12-29 15:51:04', '2024-12-29 15:51:04'),
+(3, 'Museum Dr Soetomo', 'Gedung Nasional Indonesia (GNI) mulai dibangun pada 11 Juli 1930 yang awalnya difungsikan sebagai tempat pertemuan para tokoh perintis kemerdekaan dalam menyusun taktik dan strategi dalam mencapai kemerdekaan Indonesia berada di Jalan Bubutan, Kota Surabaya, Provinsi Jawa Timur, Indonesia. Pada tahun 2017 salah satu bangunan di dalam komplek GNI dipakai untuk Museum Dr. Soetomo, yang khusus menampilkan riwayat hidup Dr. Soetomo. Di dalam museum ini dapat dijumpai lebih dari 300 koleksi berupa alat-alat kesehatan dan foto-foto.', 'assets/images/museum dr soetomo.jpg', 4.7, 'https://maps.app.goo.gl/EYmFDrfDyDhHZxqn9', '2024-12-29 15:51:04', '2024-12-29 15:51:04'),
+(4, 'Museum Pendidikan', 'Museum Pendidikan Surabaya terletak di Jalan Genteng Kali, Surabaya. Museum ini menjadi sarana kegiatan edukasi, riset, dan rekreasi di Kota Surabaya, merupakan museum tematik yang didirikan sebagai langkah pelestarian sejarah dan budaya bangsa dengan tujuan untuk mendukung kegiatan edukasi, riset dan rekreasi di Kota Surabaya. Menyimpan bukti materiil Pendidikan pada masa Pra-Aksara, Masa Klasik, Masa Kolonial dan Masa Kemerdekaan. Menempati sebuah bangunan yang merupakan bekas dari gedung Sekolah Taman Siswa.', 'assets/images/museum pendidikan.jpeg', 4.8, 'https://maps.app.goo.gl/zj3UNQojDxqY6AP67', '2024-12-29 15:51:04', '2024-12-29 15:51:04'),
+(5, 'Museum Surabaya Siola', 'Museum Surabaya diresmikan oleh Walikota Surabaya pada tanggal 3 Mei 2015. Museum ini berlokasi di ujung Jalan Tunjungan, tepatnya di dalam gedung ex. SIOLA. Koleksi-koleksinya berkaitan dengan sosial budaya Kota Surabaya. Gedung ini sendiri merupakan salah satu bangunan cagar budaya yang dulunya bernama Gedung Whiteaway Laidlaw. Koleksi museum ini berfokus pada aspek sosial dan budaya Surabaya, memberikan wawasan mendalam tentang sejarah dan perkembangan kota. Gedung bersejarah ini menjadi salah satu pusat edukasi dan pelestarian warisan budaya Surabaya.', 'assets/images/museuim siola sby.jpg', 4.6, 'https://maps.app.goo.gl/utCepxPYAehnHnTv5', '2024-12-29 15:51:04', '2024-12-29 15:51:04'),
+(6, 'Museum HOS Tjokroaminoto', 'Salah satu destinasi wisata sejarah ini berlokasi di Jalan Peneleh Gang VII, museum menempati rumah yang dulunya adalah tempat tinggal HOS Tjokroaminoto beserta keluarganya. Tak hanya itu, rumah ini juga menjadi saksi bisu perjuangan bangsa maupun lahirnya tokoh nasional. Bahkan Soekarno juga pernah kos disini Koleksinya dalah barang-barang yang berkaitan dengan kisah HOS Tjokroaminoto. Museum ini didirikan pada tahun 1974 bangunan ini awalnya merupakan kediaman resmi Tjokroaminoto dan kemudian diubah menjadi museum.', 'assets/images/museum hos tjokro.jpg', 4.7, 'https://maps.app.goo.gl/XieSsTvCUjtfSwNz7', '2024-12-29 15:51:04', '2024-12-29 15:51:04'),
+(7, 'Museum W.R Soepratman', 'Bangunan museum ini awalnya adalah rumah milik kakak pertama W.R Soepratman berada di Jl. Mangga No.21, Gedang Sewu, Surabaya. Soepratman tinggal di rumah tersebut pada tahun 1937, hingga akhirnya meninggal dunia pada 17 Agustus 1938 Pada 1936 dan untuk bersembunyi dari kejaran pasukan Belanda. Di dalam museum berisi koleksi barang yang berkaitan dengan W.R Soepratman. Yang paling ikonik dari museum ini adalah Patung W.R Soepratman berpose memainkan biola yang ada di depan museum juga ada lemari berisi replika biola milik Sang Maestro. Ada banyak spot foto menarik di tempat ini dengan nuansa vintage atau zaman dulu.', 'assets/images/museum wr soepratman.jpg', 4.8, 'https://maps.app.goo.gl/m8kQUCQ7cqJyZfq9A', '2024-12-29 15:51:04', '2024-12-29 15:51:04'),
+(8, 'Museum Olahraga', 'Museum Olahraga diresmikan pada tanggal 8 Mei 2021. Dibangun untuk menggambarkan dinamika sejarah dan budaya bangsa Indonesia terkait cerita sejarah olahraga serta benda dan bukti materiil peninggalan para Pejuang dan Pahlawan Olahraga yang ada Surabaya. Museum ini menyimpan koleksi para atlet Surabaya. Ratusan koleksi terbagi menjadi tiga jenis yaitu koleksi historika (koleksi yang diperoleh dari hasil temuan, hasil escavasi ataupun bukti materil bersejarah), koleksi heraldika (tanda penghargaan ataupun jasa, kepangkatan, lambang atau logo), dan koleksi teknologika terkait benda dengan unsur teknologi. Museum ini didirikan sebagai penghormatan atas jasa prestasi para atlet.', 'assets/images/museum olahraga.jpg', 4.7, 'https://maps.app.goo.gl/r2GhYe9jmddyfoK47', '2024-12-29 15:51:04', '2024-12-29 15:51:04'),
+(9, 'Wisata Perahu Kalimas', 'Wisata Kalimas pada dasarnya adalah sebuah objek wisata yang menghadirkan perjalanan menelusuri daerah Surabaya dengan sebuah perahu. Objek wisata ini kemudian banyak masyarakat kenal sebagai wisata Perahu Kalimas. Objek wisata ini telah resmi beroperasi sejak pengesahannya di Hari Ulang Tahun Kota Surabaya yang ke-729. Wali Kota Surabaya, Eri Cahyadi, menegaskan bahwa dengan disahkannya objek wisata Kalimas, maka objek wisata Kalimas yang dulunya tidak terawat kini telah sepenuhnya dikembangkan dan dibuka untuk umum. Wisata perahu Kalimas sendiri adalah wisata menyusuri kota dengan sebuah perahu dan mengikuti rute sungai.', 'assets/images/sungai-kalimas-surabaya-1.jpeg', 4.1, 'https://maps.app.goo.gl/WMGqD4bJQ6KPYFmF8', '2024-12-29 15:51:04', '2024-12-29 15:51:04'),
+(10, 'Monumen Tugu Pahlawan', 'Monumen Tugu Pahlawan dibangun untuk mengenang sejarah perjuangan Pahlawan Kemerdekaan Bangsa Indonesia dalam peristiwa pertempuran 10 Nopember 1945 di Surabaya. Bangunan monumen dibangun dengan bentuk menyerupai \"paku terbalik\" setinggi 45-yard atau 40,50 meter. Untuk melengkapi monumen, dibangunlah fasilitas sejarah yaitu Museum 10 Nopember yang di dalamnya terdapat ratusan koleksi seperti koleksi foto, senjata rampasan dan artefak peninggalan pertempuran di Surabaya dan fasilitas pendukung lain yaitu diorama elekronik dan diorama statis.', 'assets/images/Tugu_Pahlawan_Surabaya.jpg', 4.7, 'https://maps.app.goo.gl/kVgJk9daTXYmMfEv6', '2024-12-29 15:51:04', '2024-12-29 15:51:04'),
+(11, 'Jamboree Playland', 'Jamboree Playland merupakan tempat hiburan baru di Kota Surabaya yang cocok untuk dijadikan destinasi berlibur bersama anak dan keluarga. Adapun fasilitas yang tersedia antara lain Kolam renang Dewasa dengan kedalaman 125 cm, kolam renang anak-anak dengan ukuran 30 cm dan 50 cm, Taman Sensorik, toilet dan ruang ganti untuk pria, wanita dan disabilitas. Wali Kota Surabaya, Eri Cahyadi, meresmikan Kolam Renang Jambangan Hore (Jambore) Playland, di Jalan Ketintang Madya VII Surabaya. Jambore Playland ini merupakan salah satu, komitmen Pemkot Surabaya.', 'assets/images/jamboree-playlandkhusus-anak_1726801149.jpeg', 4.1, 'https://maps.app.goo.gl/iiG2eTV31oLQM1re8', '2024-12-29 15:51:04', '2024-12-29 15:51:04'),
+(12, 'Jembatan Suramadu', 'Jembatan Nasional Suramadu, atau Jembatan Suramadu (Suramadu merupakan singkatan dari Surabaya Madura), adalah sebuah jembatan yang melintasi Selat Madura, menghubungkan Pulau Jawa (di Surabaya) dan Pulau Madura (di Bangkalan, tepatnya timur Kamal), Indonesia. Dengan panjang 5.438 m, jembatan ini merupakan jembatan terpanjang di Indonesia. Jembatan Suramadu terdiri dari tiga bagian yaitu jalan layang, jembatan penghubung, dan jembatan utama. Jalan yang melintasi jembatan ini sebelumnya merupakan jalan tol sejak peresmiannya pada Juni 2009 hingga Oktober 2018.', 'assets/images/suramadu.jpg', 4.3, 'https://maps.app.goo.gl/KUG5g4oVKW2fePM5A', '2024-12-29 15:51:04', '2024-12-29 15:51:04'),
+(13, 'Kebun Binatang Surabaya', 'Kebun Binatang Surabaya, disingkat KBS adalah salah satu kebun binatang yang populer di Indonesia dan terletak di Surabaya. KBS merupakan kebun binatang yang pernah terlengkap se-Asia Tenggara, di dalamnya terdapat lebih dari 230 spesies satwa yang berbeda yang terdiri lebih dari 2179 ekor satwa. Termasuk di dalamnya satwa langka Indonesia maupun dunia terdiri dari Mamalia, Aves, Reptilia, dan Pisces.', 'assets/images/kbs.jpeg', 4.8, 'https://maps.app.goo.gl/a4GKcGbMHeiqjuRY7', '2024-12-29 15:51:04', '2024-12-29 15:51:04'),
+(14, 'Monumen Kapal Selam', 'Monumen Kapal Selam, atau disingkat Monkasel, adalah sebuah museum kapal selam yang terdapat di Embong Kaliasin, Genteng, Surabaya. Terletak 333 di pusat kota yaitu di Jalan Pemuda, tepat di sebelah Plaza Surabaya, dan terdapat pintu akses untuk mengakses mal dari dalam monumen. Wisatawan dapat mengunjungi Monkasel sesuai jam operasional berlaku mulai pukul 08.00 WIB hingga 21.00 WIB.', 'assets/images/monkasel.jpg', 4.3, 'https://maps.app.goo.gl/EdtMdJLXcmSNJ79q6', '2024-12-29 15:51:04', '2024-12-29 15:51:04');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `destinasi`
+--
+ALTER TABLE `destinasi`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `destinasi`
+--
+ALTER TABLE `destinasi`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
